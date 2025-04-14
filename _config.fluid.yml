@@ -104,3 +104,12 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+about:
+  enable: true
+  #banner_img: /img/default.png
+  banner_img_height: 60
+  banner_mask_alpha: 0.3
+  #avatar: /img/Osayo.jpg
+  name: "Osaya"
+  intro: "Some One"
