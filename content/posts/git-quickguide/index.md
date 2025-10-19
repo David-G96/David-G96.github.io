@@ -9,6 +9,7 @@ tags: ["coding","git"]
 ## TL;DR
 
 Already familiar with git? Need a shorter version? Use this cheat sheet instead.
+👉 [Git Cheat Sheet]({{< ref "posts/git-cheatsheet" >}} "Git Cheat Sheet")
 
 ---
 
