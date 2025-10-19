@@ -1,6 +1,6 @@
 ---
 title: "Git Quick Guide"
-date: 2025-10-19
+date: 2025-10-18
 draft: false
 summary: "Quick lookup about common workflows with git"
 tags: ["coding","git"]
