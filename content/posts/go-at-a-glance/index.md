@@ -15,7 +15,7 @@ As it is described on official Golang [website](https://go.dev/), Go is
 - [x] Built-in concurrency and a robust standard library
 - [x] Large ecosystem of partners, communities, and tools
 
-Also, according to Stack Overflow and TIOBE, Go is popular(even greater than Pascal, SQL, and Rust!) and widely admired(23.1%) among developers.
+Also, according to Stack Overflow and TIOBE, Go is popular (even more than Pascal, SQL, and Rust!) and widely admired (23.1%) among developers.
 
 ![2024 Stack Overflow Developer Survey](stackoverflow-2024.png)
 ![November 2025 TIOBE index](tiobe-nov-2025.png)
@@ -26,7 +26,7 @@ What makes Go different?
 
 ### Super Simple Syntax
 
-Unlike Rust, C++, or Java, the syntax of Go is fully designed with simplicity and readability. Here is an example of helloworld:
+Unlike Rust, C++, or Java, the syntax of Go is fully designed with simplicity and readability. Here is an example of a "Hello World!" program:
 
 ``` Go
 package main
@@ -40,11 +40,11 @@ func main() {
 
 ```
 
-In Go, no semicolon is needed. Every "{"(left curly bracket) must not be on the next line. "go fmt" enforces everyone's code to be with the same style, which significantly improve the ease to read and write codes.
+In Go, no semicolon is needed. Every "{" (left curly bracket) must appear on the same line. The `go fmt` tool enforces a consistent style for everyone’s code, which significantly improves readability and maintainability.
 
 ### Error Handling
 
-In Go, there is no Java/C++-like "try-catch-throw", or Rust/Haskell-like "Either/Result" types, all you need is just "Error". [Errors are just values](https://go.dev/blog/errors-are-values), and we should respect that. Dealing with "try-catch-throw" makes you just want to ignore the error handling, throwing it to the outer space until your program crashes; Wanna to deal with "Either/Result"? You probably gonna either become a master of `unwrap()` if you are using Rust or otherwise painfully learn "What are monads and how can we use them?" if you are using Haskell.
+In Go, there is no Java/C++-like "try-catch-throw", or Rust/Haskell-like "Either/Result" types, all you need is just "Error". [Errors are just values](https://go.dev/blog/errors-are-values), and we should respect that. Dealing with "try-catch-throw" makes you just want to ignore the error handling, throwing it out to outer space until your program crashes; Want to deal with "Either/Result"? You probably gonna either become a master of `unwrap()` if you are using Rust or otherwise painfully learn "What are monads and how can we use them?" if you are using Haskell.
 
 I didn't like the error handling of Go a lot at first. However, it is actually a balance of "try-catch-throw" and "Either/Result". As the example below, one easy-to-see benefit of that is you can handle errors without interrupting your control flow.
 
@@ -77,7 +77,7 @@ func main() {
 
 If the concurrency in Rust can be described as totally ["Fearless"](https://doc.rust-lang.org/book/ch16-00-concurrency.html), then the concurrency in Go should be described as totally "Effortless". Rust has a lot of great tools to support concurrency models, but since Rust doesn't provide any official asynchronous runtimes, you still have to write numerous "async" and ".await" in your Rust programs. Plus, you have to choose runtime carefully since you can't run functions on different runtimes.
 
-However, in Go, garbage collection and asynchronous runtime, the "Gorountine", are both out-of-the-box. No need to declare any function/closure as "async". Just write and use it, smoothly and seamlessly as normal functions. Here's an example:
+However, in Go, garbage collection and asynchronous runtime, the "Goroutine", are both out-of-the-box. No need to declare any function/closure as "async". Just write and use it, smoothly and seamlessly as normal functions. Here's an example:
 
 ``` Go
 package main
@@ -88,7 +88,7 @@ import (
 )
 
 func f(from string) {
-    for i := range 3 {
+    for i := 0; i < 3; i++ {
         fmt.Println(from, ":", i)
     }
 }
@@ -108,4 +108,4 @@ func main() {
 }
 ```
 
-Another highlight of concurrent programming in Go is the Communicating Sequential Processes (CSP) model which emphasize "Do not communicate by sharing memory; instead, share memory by communicating."
+Another highlight of concurrent programming in Go is its Communicating Sequential Processes (CSP) model, which emphasizes: “Do not communicate by sharing memory; instead, share memory by communicating.”
